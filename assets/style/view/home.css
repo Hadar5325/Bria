@@ -1,0 +1,62 @@
+section.app {
+    height: 100vh;
+    width: 100vw;
+    background-color: beige;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+}
+
+
+section.images-section {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-template-rows: repeat(2, 100px); */
+    grid-template-areas:
+        "image-left     image-right"
+        "text-left      text-right";
+}
+
+img.image-left {
+    grid-area: image-left;
+}
+
+img.image-right {
+    grid-area: image-right;
+}
+
+div.text-left {
+    grid-area: text-left;
+}
+
+div.text-right {
+    grid-area: text-right;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.active {
+    color: violet;
+}
+
+section.images-section {
+    justify-items: center;
+    object-fit: cover;
+}
+
+img.image {
+    height: 300px;
+    width: 95%;
+    border: 2px solid red;
+    margin: 10px;
+}
+
+div.text-right,
+div.text-left {
+    margin: 10px;
+    text-align: right;
+
+}
